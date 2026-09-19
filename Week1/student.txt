@@ -1,0 +1,5 @@
+Name: Kyatrina
+Age: 19
+Course: Data Science
+College: ABC University
+College: Itahari International College
