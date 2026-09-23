@@ -1,0 +1,188 @@
+{
+  "rows_raw": 9800,
+  "rows_clean": 9799,
+  "date_min": "2015-01-03",
+  "date_max": "2018-12-30",
+  "total_sales": 2261255.4107,
+  "n_orders": 4922,
+  "n_customers": 793,
+  "avg_order_value": 459.4180029865908,
+  "yearly_sales": {
+    "2015": 479574.8361,
+    "2016": 459436.0054,
+    "2017": 600192.55,
+    "2018": 722052.0192
+  },
+  "yoy_growth_pct": {
+    "2016": -4.199309301499854,
+    "2017": 30.636811861850653,
+    "2018": 20.303395835219874
+  },
+  "best_month": "November",
+  "worst_month": "February",
+  "top_category": "Technology",
+  "top_category_share_pct": 36.59276475733675,
+  "top_region": "West",
+  "top_region_share_pct": 31.408202768219915,
+  "top_segment": "Consumer",
+  "top_segment_share_pct": 50.770935718606125,
+  "top_subcategory": "Phones",
+  "top_state": "California",
+  "sales_skew": 12.982858261241196,
+  "avg_shipping_days": 3.9611184814777016,
+  "rfm_best_k": 4,
+  "rfm_silhouette": 0.25523388420855647,
+  "top20_customers_share_pct": 48.47474501611814,
+  "rfm_groups": [
+    {
+      "Group": "Tier 1",
+      "Customers": 233,
+      "Avg_Recency_days": 97.9,
+      "Avg_Frequency": 8.7,
+      "Avg_Monetary": 4908.7,
+      "Total_Sales": 1143728.0,
+      "Share_of_sales_pct": 50.6,
+      "Share_of_customers_pct": 29.4
+    },
+    {
+      "Group": "Tier 2",
+      "Customers": 199,
+      "Avg_Recency_days": 20.0,
+      "Avg_Frequency": 6.7,
+      "Avg_Monetary": 2676.4,
+      "Total_Sales": 532607.7,
+      "Share_of_sales_pct": 23.6,
+      "Share_of_customers_pct": 25.1
+    },
+    {
+      "Group": "Tier 3",
+      "Customers": 274,
+      "Avg_Recency_days": 223.3,
+      "Avg_Frequency": 4.9,
+      "Avg_Monetary": 1992.9,
+      "Total_Sales": 546063.4,
+      "Share_of_sales_pct": 24.1,
+      "Share_of_customers_pct": 34.6
+    },
+    {
+      "Group": "Tier 4",
+      "Customers": 87,
+      "Avg_Recency_days": 349.6,
+      "Avg_Frequency": 2.6,
+      "Avg_Monetary": 446.6,
+      "Total_Sales": 38856.4,
+      "Share_of_sales_pct": 1.7,
+      "Share_of_customers_pct": 11.0
+    }
+  ],
+  "forecast_horizon_months": 6,
+  "forecast_models": [
+    {
+      "Model": "Holt-Winters",
+      "MAE": 13132.48,
+      "RMSE": 18413.27,
+      "MAPE %": 15.81
+    },
+    {
+      "Model": "Linear trend + monthly seasonality",
+      "MAE": 14668.06,
+      "RMSE": 18484.99,
+      "MAPE %": 17.65
+    },
+    {
+      "Model": "Seasonal naive (same month last year)",
+      "MAE": 20867.49,
+      "RMSE": 23680.58,
+      "MAPE %": 26.15
+    },
+    {
+      "Model": "Naive (last month)",
+      "MAE": 31636.57,
+      "RMSE": 37862.67,
+      "MAPE %": 35.63
+    },
+    {
+      "Model": "3-month moving average",
+      "MAE": 36185.88,
+      "RMSE": 42565.87,
+      "MAPE %": 40.99
+    }
+  ],
+  "forecast_best_model": "Holt-Winters",
+  "forecast_next_6_months": {
+    "2019-01": 49384.046666276176,
+    "2019-02": 41589.4302848638,
+    "2019-03": 71939.23514397514,
+    "2019-04": 60859.9437785802,
+    "2019-05": 68119.74280292331,
+    "2019-06": 62700.01121802197
+  },
+  "order_models": [
+    {
+      "Model": "Baseline (always predict the average)",
+      "MAE": 229.8545,
+      "RMSE": 778.5744,
+      "R2 (original scale)": -0.0608,
+      "R2 (log scale)": -0.0001
+    },
+    {
+      "Model": "Linear Regression",
+      "MAE": 196.2232,
+      "RMSE": 729.7956,
+      "R2 (original scale)": 0.0679,
+      "R2 (log scale)": 0.4465
+    },
+    {
+      "Model": "Random Forest",
+      "MAE": 196.4223,
+      "RMSE": 728.4788,
+      "R2 (original scale)": 0.0713,
+      "R2 (log scale)": 0.4372
+    },
+    {
+      "Model": "Gradient Boosting",
+      "MAE": 194.7547,
+      "RMSE": 725.4372,
+      "R2 (original scale)": 0.079,
+      "R2 (log scale)": 0.4517
+    },
+    {
+      "Model": "Linear Regression on raw Sales (Week 11 approach)",
+      "MAE": 232.7699,
+      "RMSE": 700.0884,
+      "R2 (original scale)": 0.1423,
+      "R2 (log scale)": -0.173
+    }
+  ],
+  "order_cv_r2": {
+    "Linear Regression": 0.45115464491752777,
+    "Random Forest": 0.432779650918818,
+    "Gradient Boosting": 0.4403755843594109
+  },
+  "order_best_model": "Linear Regression",
+  "order_best_test_r2_log": 0.4464550871422063,
+  "order_best_test_r2_original": 0.0679264726298372,
+  "order_best_test_mae": 196.22324523588617,
+  "order_top_features": [
+    [
+      "Category",
+      0.6439230776049949
+    ],
+    [
+      "Sub-Category",
+      0.4580259202581668
+    ],
+    [
+      "State",
+      0.030842375194660133
+    ],
+    [
+      "Shipping Days",
+      0.00047174999830776885
+    ],
+    [
+      "Region",
+      0.00044881476231073414
+    ]
+  ]
+}
